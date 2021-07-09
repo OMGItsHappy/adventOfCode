@@ -10,7 +10,6 @@ def partOne(inp : list) -> int:
    while vertical < len(inp) - 1:
       toSide += right
       vertical += down
-      print(inp[vertical][toSide%len(inp[vertical])])
       if inp[vertical][toSide%len(inp[vertical])] == '#':
          total += 1
 
@@ -27,11 +26,8 @@ def partTwo(inp : list) -> int:
       while vertical < len(inp) - 1:
          toSide += right
          vertical += down
-         print(inp[vertical][toSide%len(inp[vertical])])
          if inp[vertical][toSide%len(inp[vertical])] == '#':
             total += 1
       endTotal *= total
 
    return endTotal
-
-print(partTwo(hill))
