@@ -45,7 +45,7 @@ def buildPassports(csv : str) -> list:
       entrys.append(returnDict(data[breaks[x] + 1 : breaks[x + 1]]))
    
    entrys.append(returnDict(data[:breaks[0]]))
-   entrys.append(returnDict(data[breaks[-1]:]))
+   entrys.append(returnDict(data[breaks[-1] + 1:]))
 
    return entrys
 
